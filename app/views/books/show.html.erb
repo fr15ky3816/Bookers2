@@ -8,6 +8,8 @@
   <tbody>
     <th> <%= @book.title %> </th>
     <th> <%= @book.opinion %> </th>
+    <th> <%= link_to "Edit", edit_book_path(@book.id) %> </th>
+    <th> <%= link_to "Destroy", book_path(@book.id) ,method: :delete %></th>
 
   </tbody>
 </table>

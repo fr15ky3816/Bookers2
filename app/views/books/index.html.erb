@@ -1,0 +1,21 @@
+<div class="header">Books</div>
+
+
+<% @book.each do |book| %>
+<table>
+  <thead>
+    <th></th
+    ><th>Title</th>
+    <th>Opinion</th>
+  </thead>
+  <tbody>
+    <th>
+      <%= link_to user_path(book.user_id) do%>
+        <%= image %>
+      <% end %>
+
+    </th>
+    <th><%= book.title %></th>
+    <th><%= book.opinion %></th>
+  </tbody>
+</table>
