@@ -2,16 +2,20 @@
 
 <table>
   <thead>
-    <th></th>
-    <th>Title</th>
-    <th>Opinion</th>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Opinion</th>
+    </tr>
   </thead>
 
   <tbody>
-    <th>image</th>
     <% @books.each do |book| %>
-    <th> <%= book.title %> </th>
-    <th> <%= book.opinion %> </th>
-    <% end %>
+    <tr>
+      <td>image</td>
+      <td> <%= book.title %> </td>
+      <td> <%= book.opinion %> </td>
+      <% end %>
+    </tr>
   </tbody>
 </table>

@@ -2,15 +2,20 @@
 
 <table>
   <thead>
-    <th>image</th>
-    <th>name</th>
-    <th></th>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th></th>
+    </tr>
   </thead>
-  <% @users.each do |user| %>
+
   <tbody>
-    <th>image</th>
-    <th><%= user.name %></th>
-    <th><%= link_to "Show", user_path(user.id) %></th>
+    <% @users.each do |user| %>
+    <tr>
+      <td>image</td>
+      <td><%= user.name %></td>
+      <td><%= link_to "Show", user_path(user.id) %></td>
+    </tr>
   </tbody>
   <% end %>
 </table>
