@@ -1,0 +1,29 @@
+<div class="header">User info</div>
+<table>
+  <tr>
+    <td>image</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td><%= user.name %></td>
+  </tr>
+  <tr>
+    <td>introuction</td>
+    <td><%= user.introduction %></td>
+  </tr>
+</table>
+<%= link_to "edit" , edit_user_path(user.id) %>
+
+
+<div class="header">New book</div>
+
+
+<%= form_with model: book, local:true do |f| %>
+
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+  <h4>説明</h4>
+  <%= f.text_area :opinion %>
+  <%= f.submit 'create book' %>
+<% end %>
