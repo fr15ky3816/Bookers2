@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+  @import "bootstrap";
+  @import 'font-awesome-sprockets';
+  @import 'font-awesome';
+
+
+
+
+
+
 .header {
   font-size: 2rem;
 }
