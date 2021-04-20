@@ -14,7 +14,9 @@
   </tr>
 </table>
 
-<%= link_to "edit" , edit_user_path(user.id) %>
+<%= link_to edit_user_path(user.id) do %>
+  <i class="fas fa-user-cog btn btn-outline-secondary btn-block"></i>
+<% end %>
 
 
 <div class="header">New book</div>
