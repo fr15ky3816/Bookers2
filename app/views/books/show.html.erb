@@ -1,4 +1,4 @@
-<div class="header">Books detail</div>
+<div class="header">Book detail</div>
 
 <table>
 
@@ -16,3 +16,5 @@
 
   </tbody>
 </table>
+
+<%= render partial: 'layouts/left_partial', locals: { user: @user, book: @book_new } %>
