@@ -10,10 +10,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-   def create
-     super
-      redirect_to user_path(id: params[:id])
-   end
+  # def create
+  #   super
+  # end
 
   # GET /resource/edit
   # def edit
