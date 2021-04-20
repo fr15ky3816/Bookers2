@@ -12,7 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
    def create
      super
-     @user.image = "images/no_image.jpeg"
+      redirect_to user_path(id: params[:id])
    end
 
   # GET /resource/edit
