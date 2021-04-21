@@ -25,44 +25,44 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto navbar-brand">
               <% if user_signed_in? %>
-                <li class="mx-1">
-                  <%= link_to user_path(current_user.id) do %>
+                <li class="mx-1 nav-item">
+                  <%= link_to user_path(current_user.id), class:"nav-link text-white" do %>
                     <i class="fas fa-home">Home</i>
                   <% end %>
                 </li>
                 <li class="mx-1">
-                  <%= link_to users_path do %>
+                  <%= link_to users_path, class:"nav-link text-white" do %>
                     <i class="fas fa-users">Users</i>
                   <% end %>
                 </li>
                 <li class="mx-1">
-                  <%= link_to books_path do %>
+                  <%= link_to books_path, class:"nav-link text-white" do %>
                     <i class="fas fa-book-open">Books</i>
                   <% end %>
                 </li>
                 <li class="mx-1">
-                  <%= link_to destroy_user_session_path, method: :delete do %>
+                  <%= link_to destroy_user_session_path, class:"nav-link text-white", method: :delete do %>
                     <i class="fas fa-sign-out-alt">logout</i>
                   <% end %>
                 </li>
               <% else %>
                 <li class="mx-1">
-                  <%= link_to root_path do %>
+                  <%= link_to root_path, class:"nav-link text-white" do %>
                     <i class="fas fa-home">Home</i>
                   <% end %>
                 </li>
                 <li class="mx-1">
-                  <%= link_to  about_path do %>
+                  <%= link_to  about_path, class:"nav-link text-white" do %>
                     <i class="fas fa-link">About</i>
                   <% end %>
                 </li>
                 <li class="mx-1">
-                  <%= link_to  new_user_registration_path do %>
+                  <%= link_to  new_user_registration_path, class:"nav-link text-white" do %>
                     <i class="fas fa-user-plus">sign up</i>
                   <% end %>
                 </li>
                 <li class="mx-1">
-                  <%= link_to  user_session_path do %>
+                  <%= link_to  user_session_path, class:"nav-link text-white" do %>
                     <i class="fas fa-sign-in-alt">login</i>
                   <% end %>
                 </li>
@@ -82,14 +82,14 @@
     <% end %>
 
 
-    <main class="mb-auto">
+    <main>
     <%= yield %>
     </main>
 
-    <footer class="bg-dark text-white pt-5 pb-4">
+    <footer>
       <div class="container">
-        <div class="row no-gutters">
-           <div class="col-md-4">
+        <div class="row">
+           <div class="col-md-4 offset-md-4 text-center  ">
              <p>CopyRight Infratop.inc</p>
            </div>
         </div>
