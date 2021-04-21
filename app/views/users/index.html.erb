@@ -1,23 +1,39 @@
-<div class="header">Users</div>
+<div class="container">
+  <div class="row">
 
-<table>
-  <thead>
-    <tr>
-      <th>image</th>
-      <th>name</th>
-      <th></th>
-    </tr>
-  </thead>
+    <div class="render col-md-3">
+      <%= render partial: 'layouts/left_partial', locals: { user: @user, book: @book } %>
+    </div>
 
-  <tbody>
-    <% @users.each do |user| %>
-    <tr>
-      <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></td>
-      <td><%= user.name %></td>
-      <td><%= link_to "Show", user_path(user.id) %></td>
-    </tr>
-  </tbody>
-  <% end %>
-</table>
+    <div class="main col-md-8 offset-md-1">
+      <div class="header">Users</div>
 
-<%= render partial: 'layouts/left_partial', locals: { user: @user, book: @book } %>
+        <table>
+          <thead>
+            <tr>
+              <th>image</th>
+              <th>name</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+            <tr>
+              <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></td>
+              <td><%= user.name %></td>
+              <td><%= link_to "Show", user_path(user.id) %></td>
+            </tr>
+          </tbody>
+          <% end %>
+        </table>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
