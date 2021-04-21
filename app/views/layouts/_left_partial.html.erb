@@ -1,16 +1,16 @@
 <div class="header">User info</div>
-<table>
+<table class="table">
   <tr>
     <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></td>
     <td></td>
   </tr>
   <tr>
-    <td>name</td>
-    <td><%= user.name %></td>
+    <th>name</th>
+    <th><%= user.name %></th>
   </tr>
   <tr>
-    <td>introduction</td>
-    <td><%= user.introduction %></td>
+    <th>introduction</th>
+    <th><%= user.introduction %></th>
   </tr>
 </table>
 
@@ -24,9 +24,13 @@
 
 <%= form_with model: book, local:true do |f| %>
 
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-  <h4>opinion</h4>
-  <%= f.text_area :body %>
+  <div class="form-group">
+    <rabel class="d-block">Title</rabel>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-group">
+    <rabel class="d-block">opinion</rabel>
+    <%= f.text_area :body %>
+  </div>
   <%= f.submit 'Create Book', class:"btn btn-success" %>
 <% end %>
