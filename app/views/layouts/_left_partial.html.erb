@@ -1,3 +1,4 @@
+<%= render partial: 'layouts/error_messages', locals: {book: @book } %>
 <h2 class="header">User info</h2>
 <table class="table">
   <tr>
@@ -17,6 +18,7 @@
 <%= link_to edit_user_path(user.id) do %>
   <i class="fas fa-user-cog btn btn-outline-secondary btn-block"></i>
 <% end %>
+
 
 
 <h2 class="header">New book</h2>
